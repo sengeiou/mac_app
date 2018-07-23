@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Help View Controller-->
+        <scene sceneID="mOi-21-xdK">
+            <objects>
+                <viewController storyboardIdentifier="HelpViewController" id="Wgd-sf-OzL" customClass="HelpViewController" customModule="PeterMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="5qr-d6-sgI">
+                        <rect key="frame" x="0.0" y="0.0" width="1070" height="700"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uen-GQ-uHP">
+                                <rect key="frame" x="0.0" y="0.0" width="1070" height="700"/>
+                                <clipView key="contentView" id="VR5-hU-15Z">
+                                    <rect key="frame" x="1" y="1" width="1068" height="698"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="7aZ-Dh-rnL">
+                                            <rect key="frame" x="0.0" y="0.0" width="1068" height="698"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="1068" height="698"/>
+                                            <size key="maxSize" width="1070" height="10000000"/>
+                                            <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="tdq-YP-Kve">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2dL-wY-g2e">
+                                    <rect key="frame" x="1053" y="1" width="16" height="698"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WsZ-v5-eie">
+                                <rect key="frame" x="40" y="254" width="840" height="193"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="dlH-lm-OOB">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <string key="title">旨在提炼归纳日志内容,让使用者可以更直观了解查询结果。
+
+指标名称：尽量使用特殊符号，比如$
+指标运算符：表达式支持python正则
+   1、count
+      含义：取总数
+      举例：count(聊天:人消息移除缓存)，会计算满足该规则的日志条总数
+   2、sum
+      含义:  解析表达式中的数字求和
+      举例：sum(收到消息(\\d+)条)，解析日志时，判断满足该正则表达式，解析数字，然后求和。
+
+   </string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-yN-6VH">
+                                <rect key="frame" x="31" y="451" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="三、指标" id="8rG-2I-EYB">
+                                    <font key="font" size="16" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qR-zY-msX">
+                                <rect key="frame" x="31" y="586" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="二、表达式" id="QSH-Vz-WeD">
+                                    <font key="font" size="16" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJe-HN-uKY">
+                                <rect key="frame" x="31" y="216" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="四、日志解释" id="a2U-65-vbi">
+                                    <font key="font" size="16" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apY-rJ-hxz">
+                                <rect key="frame" x="40" y="157" width="747" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="lcb-5B-xPf">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <string key="title">为了帮助其他人理解自己埋的日志，可以针对某些关键日志进行解释说明，日志工具在解析日志时，会在日志行末尾添加解释。
+       
+   </string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y9P-dk-jJC">
+                                <rect key="frame" x="40" y="495" width="840" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="b3a-KD-Hhd">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <string key="title">用于过滤日志行，支持and/or运算
+   and：日志行中同时包含多个关键词。
+     or：日志行中包含任意一个关键词。
+
+比如："socialsdk_ and sdk加载";  "聊天 or sync"</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7MW-Oe-L6L">
+                                <rect key="frame" x="31" y="652" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="一、标签" id="6LM-MU-BrH">
+                                    <font key="font" size="16" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaX-Kk-GMV">
+                                <rect key="frame" x="40" y="614" width="840" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="用于规则分类，可按标签进行搜索" id="98C-rM-A6B">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uen-GQ-uHP" secondAttribute="bottom" id="0rI-YM-Ifi"/>
+                            <constraint firstItem="uen-GQ-uHP" firstAttribute="top" secondItem="5qr-d6-sgI" secondAttribute="top" id="GPJ-xJ-0NK"/>
+                            <constraint firstAttribute="trailing" secondItem="uen-GQ-uHP" secondAttribute="trailing" id="qkG-XZ-haA"/>
+                            <constraint firstItem="uen-GQ-uHP" firstAttribute="leading" secondItem="5qr-d6-sgI" secondAttribute="leading" id="s8N-2p-kp2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="vGl-Pt-eKz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="1296"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="PeterMan" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="PeterMan" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About PeterMan" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide PeterMan" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit PeterMan" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="File" id="dMs-cI-mzQ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Edit" id="5QF-Oa-p0T">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Format" id="jxT-CU-nIS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="View" id="H8h-7b-M4v">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Window" id="aUF-d1-5bR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Help" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="PeterMan" customModuleProvider="target"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" customClass="AppWindowController" customModule="PeterMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="小飞侠" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="PeterManWindow" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="1140" height="700"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="1140" height="700"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="-107"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController identifier="LoginViewController" storyboardIdentifier="LoginViewController" id="XfG-lQ-9wD" customClass="LoginViewController" customModule="PeterMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="1140" height="700"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ya7-rU-S5t">
+                                <rect key="frame" x="0.0" y="0.0" width="1140" height="700"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login_bg" id="Rlw-I4-Aj1"/>
+                            </imageView>
+                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zkg-Ej-95M">
+                                <rect key="frame" x="354" y="164" width="431" height="371"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="login_content_bg" id="fJz-zC-wwh"/>
+                            </imageView>
+                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eo3-Tq-q2Y">
+                                <rect key="frame" x="516" y="379" width="108" height="108"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="login_icon" id="ncs-gw-pF0"/>
+                            </imageView>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eyr-Zo-Upx">
+                                <rect key="frame" x="420" y="309" width="300" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="请输入花名" drawsBackground="YES" usesSingleLineMode="YES" id="XuS-Kk-clL">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DzT-NW-hPB">
+                                <rect key="frame" x="420" y="232" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="登录" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0go-ny-B4N">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="doLogin:" target="XfG-lQ-9wD" id="6mX-bR-t6j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ya7-rU-S5t" secondAttribute="bottom" id="78X-Xi-3Ap"/>
+                            <constraint firstItem="ya7-rU-S5t" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="FEd-1C-9eq"/>
+                            <constraint firstAttribute="trailing" secondItem="ya7-rU-S5t" secondAttribute="trailing" id="GXY-Xq-nj1"/>
+                            <constraint firstItem="ya7-rU-S5t" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Meg-PX-JKm"/>
+                            <constraint firstItem="ya7-rU-S5t" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ZC1-IK-ey7"/>
+                            <constraint firstAttribute="trailing" secondItem="ya7-rU-S5t" secondAttribute="trailing" id="gtD-07-sEG"/>
+                            <constraint firstItem="ya7-rU-S5t" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ubl-gl-Ori"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="DzT-NW-hPB" id="9YV-n7-ILu"/>
+                        <outlet property="nicknameView" destination="Eyr-Zo-Upx" id="RdK-DN-jLR"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-433" y="733"/>
+        </scene>
+        <!--Home Container View Controller-->
+        <scene sceneID="sq2-yd-oqZ">
+            <objects>
+                <viewController identifier="HomeContainerViewController" storyboardIdentifier="HomeContainerViewController" id="43h-rD-w0k" customClass="HomeContainerViewController" customModule="PeterMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="E5U-o0-Ktd">
+                        <rect key="frame" x="0.0" y="0.0" width="461" height="599"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="jlF-dn-qFx">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="599"/>
+                                <subviews>
+                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t61-DM-kV5">
+                                        <rect key="frame" x="0.0" y="497" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="tab_homepage_s" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="TI6-EX-m96">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showHomePage:" target="43h-rD-w0k" id="QtD-J0-X8w"/>
+                                        </connections>
+                                    </button>
+                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKg-Ja-YZL">
+                                        <rect key="frame" x="0.0" y="428" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="tab_setting_n" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="kyt-EV-ZTz">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showSettingPage:" target="43h-rD-w0k" id="Woq-DL-Qy4"/>
+                                        </connections>
+                                    </button>
+                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fB4-sl-CYq">
+                                        <rect key="frame" x="0.0" y="359" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="tab_help_n" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="eLU-FS-IbD">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showHelpPage:" target="43h-rD-w0k" id="xCv-gs-UEq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="hj1-1z-A37"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="jlF-dn-qFx" firstAttribute="top" secondItem="E5U-o0-Ktd" secondAttribute="top" id="8YR-wI-tV5"/>
+                            <constraint firstItem="jlF-dn-qFx" firstAttribute="leading" secondItem="E5U-o0-Ktd" secondAttribute="leading" id="EX1-Qf-iiM"/>
+                            <constraint firstAttribute="bottom" secondItem="jlF-dn-qFx" secondAttribute="bottom" id="eWR-b9-Xwf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="helpItemButton" destination="fB4-sl-CYq" id="rpA-Vk-9e1"/>
+                        <outlet property="homeItemButton" destination="t61-DM-kV5" id="dmC-ms-z4X"/>
+                        <outlet property="leftBarView" destination="jlF-dn-qFx" id="2zR-nr-KWE"/>
+                        <outlet property="settingItemButton" destination="PKg-Ja-YZL" id="uXh-IY-AEM"/>
+                    </connections>
+                </viewController>
+                <customObject id="eHH-gB-QPY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-621.5" y="2414.5"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="mci-UA-86l">
+            <objects>
+                <controllerPlaceholder storyboardIdentifier="HomeViewController" storyboardName="Homepage" referencedIdentifier="HomeViewController" id="MaS-pi-EKm" sceneMemberID="viewController"/>
+                <customObject id="NNC-6c-hIy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-627" y="1343"/>
+        </scene>
+        <!--AddRuleViewController-->
+        <scene sceneID="cwE-so-3R0">
+            <objects>
+                <controllerPlaceholder storyboardIdentifier="AddRuleViewController" storyboardName="AddRule" referencedIdentifier="AddRuleViewController" id="oew-rq-IeG" sceneMemberID="viewController"/>
+                <customObject id="LaE-UM-6bn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650" y="2890"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ESM-I1-lhX">
+            <objects>
+                <viewController storyboardIdentifier="loginpop" id="Zl7-Vz-0ul" sceneMemberID="viewController">
+                    <view key="view" id="NOG-ff-vbz">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rGK-d3-BnZ">
+                                <rect key="frame" x="90" y="17" width="71" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="请输入花名" id="Ky8-gk-YYX">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rGK-d3-BnZ" firstAttribute="centerY" secondItem="NOG-ff-vbz" secondAttribute="centerY" id="D44-Pp-6iT"/>
+                            <constraint firstItem="rGK-d3-BnZ" firstAttribute="centerX" secondItem="NOG-ff-vbz" secondAttribute="centerX" id="Nrn-zc-szw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="HQd-kJ-F5Z" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-694" y="3160"/>
+        </scene>
+        <!--SettingViewController-->
+        <scene sceneID="LzV-hy-OmC">
+            <objects>
+                <controllerPlaceholder storyboardIdentifier="SettingViewController" storyboardName="Setting" referencedIdentifier="SettingViewController" id="Vr0-9q-nC4" sceneMemberID="viewController"/>
+                <customObject id="LWK-2e-n9T" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-627" y="1889"/>
+        </scene>
+        <!--HelpViewController-->
+        <scene sceneID="rFc-4w-nMs">
+            <objects>
+                <controllerPlaceholder storyboardIdentifier="HelpViewController" storyboardName="Help" referencedIdentifier="HelpViewController" id="lzl-PY-BFx" sceneMemberID="viewController"/>
+                <customObject id="H16-kG-cjY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="1296"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login_bg" width="1140" height="700"/>
+        <image name="login_content_bg" width="431" height="371"/>
+        <image name="login_icon" width="108" height="108"/>
+        <image name="tab_help_n" width="70" height="70"/>
+        <image name="tab_homepage_s" width="70" height="70"/>
+        <image name="tab_setting_n" width="70" height="70"/>
+    </resources>
+</document>

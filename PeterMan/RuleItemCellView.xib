@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="RuleItemCellView" customModule="PeterMan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sip-Vo-3B0">
+                    <rect key="frame" x="28" y="128" width="37" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Q3p-pe-HJ3">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Sip-Vo-3B0" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="kEv-6g-1LX"/>
+                <constraint firstItem="Sip-Vo-3B0" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="30" id="kZP-2V-JdS"/>
+                <constraint firstItem="Sip-Vo-3B0" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="30" id="qKi-We-vbq"/>
+                <constraint firstItem="Sip-Vo-3B0" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="xah-co-Vmv"/>
+            </constraints>
+            <connections>
+                <outlet property="textView" destination="Sip-Vo-3B0" id="bGU-vw-CWw"/>
+            </connections>
+        </customView>
+    </objects>
+</document>
